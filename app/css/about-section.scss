@@ -1,16 +1,15 @@
 .about-section {
-    border: 2px solid red;
     @include phones {
         padding-top: rem(46px);
     }
 }
 
 .about-container {
-    border: 2px solid blue;
 
     @include phones {
         width: 90%;
         margin: 0 auto;
+        background: url(../img/about-bg-mobile.png) 0 100% / contain no-repeat;
     }
 }
 
@@ -20,6 +19,7 @@
         font-weight: normal;
         margin-left: rem(30px);
         position: relative;
+        margin-bottom: rem(36px);
 
         &::before {
             content: '';
@@ -31,4 +31,32 @@
             left: rem(-30px);
         }
     }
+}
+
+.about-section__text {
+    @include phones {
+        margin-bottom: rem(10px);
+    }
+}
+
+.about-section__link {
+    color: #2a4f37;
+    text-transform: uppercase;
+    position: relative;
+    @include phones {
+        display: block;
+        font-size: rem(12px);
+        letter-spacing: rem(1.2px);
+        margin-bottom: rem(190px);
+    }
+
+    &::after {
+        content: '';
+        position: absolute;
+        width: rem(8px);
+        height: rem(12px);
+        background: url(../img/arrow-right.png) 0 0 / contain no-repeat;
+        left: rem(90px);
+        top: rem(3px);
+    } 
 }

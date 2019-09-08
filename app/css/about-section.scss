@@ -5,6 +5,7 @@
 }
 
 .about-container {
+    border: 1px solid transparent;
 
     @include phones {
         width: 90%;
@@ -13,7 +14,7 @@
     }
 }
 
-.about-section__title {
+.section-title {
     @include phones {
         font-size: rem(18px);
         font-weight: normal;
@@ -47,7 +48,7 @@
         display: block;
         font-size: rem(12px);
         letter-spacing: rem(1.2px);
-        margin-bottom: rem(190px);
+        margin-bottom: rem(200px);
     }
 
     &::after {

@@ -27,7 +27,6 @@
     background-color: #91aa59;
 }
 .main-nav__list {
-    position: relative;
     padding-top: rem(90px);
     padding-left: 22%;
 }
@@ -46,14 +45,14 @@
 
 .main-nav__close-btn {
     position: absolute;
-    width: rem(27px);
-    height: rem(27px);
+    z-index: 3;
+    cursor: pointer;
     border: none;
     font-size: 0;
     top: rem(24px);
     right: 5%;
     background-color: transparent;
-    cursor: pointer;
+    padding: rem(13px);
 
     &::before {
         content: '';
@@ -116,6 +115,7 @@
     border-radius: rem(20px);
     color: #ffffff;
     cursor: pointer;
+
 
     @include phones {
         font-size: rem(11px);

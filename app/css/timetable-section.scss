@@ -20,18 +20,46 @@
 
 .timetable__item {
     border: 1px solid transparent;
+    position: relative;
     &:first-child {
         background-color: #c8d4ac;
         margin-bottom: rem(20px);
+        &::before {
+            content: '01';
+            position: absolute;
+            font-size: rem(114px);
+            color: #fff;
+            opacity: 0.2;
+            font-weight: bold;
+            left: rem(80px);
+        }
     }
     &:nth-child(2) {
         background-color: #b2c38a;
         margin-bottom: rem(20px);
+        &::before {
+            content: '02';
+            position: absolute;
+            font-size: rem(114px);
+            color: #fff;
+            opacity: 0.2;
+            font-weight: bold;
+            left: rem(80px);
+        }
 
 
     }
     &:last-child {
         background-color: #9cb269;
+        &::before {
+            content: '03';
+            position: absolute;
+            font-size: rem(114px);
+            color: #fff;
+            opacity: 0.2;
+            font-weight: bold;
+            left: rem(80px);
+        }
     }
   
     @include phones {
@@ -96,10 +124,21 @@
     border: rem(2px) solid #fff;
     border-radius: rem(20px);
     display: block;
+    position: relative;
 
     @include phones {
         padding: rem(10px) 0;
         width: rem(132px);
         text-align: center;
+        &::after {
+            content: '';
+            position: absolute;
+            width: rem(31px);
+            height: rem(12px);
+            background: url(../img/btn-arrow.png) 0 0 / contain no-repeat;
+            top: rem(18px);
+            left: rem(110px);
+
+        }
     }
 }

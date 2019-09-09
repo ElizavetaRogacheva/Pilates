@@ -1,17 +1,30 @@
 .timetable-section {
+    @include tablets {
+        padding-top: rem(57px);
+    }
+
     @include phones {
         padding-top: rem(45px);
     }
 }
 
 .timetable-container {
+    margin: 0 auto;
+
+    @include tablets {
+        width: 84%;
+    }
      @include phones {
         width: 90%;
-        margin: 0 auto;
      }   
 }
 
 .timetable__list {
+
+    @include tablets {
+        display: flex;
+        justify-content: space-between;
+    }
     @include phones {
         width: 84%;
         margin: 0 auto;
@@ -21,6 +34,9 @@
 .timetable__item {
     border: 1px solid transparent;
     position: relative;
+    border-radius: rem(4px);
+
+
     &:first-child {
         background-color: #c8d4ac;
         margin-bottom: rem(20px);
@@ -61,12 +77,17 @@
             left: rem(80px);
         }
     }
+
+    @include tablets {
+        width: 30%;
+        padding-top: rem(100px);
+        padding-left: 2%;
+
+    }
   
     @include phones {
         padding-top: rem(100px);
         padding-left: 17%;
-        border-radius: rem(4px);
-
     }
 }
 

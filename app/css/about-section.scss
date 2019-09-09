@@ -1,4 +1,8 @@
 .about-section {
+    @include tablets {
+        padding-top: rem(88px);
+    }
+
     @include phones {
         padding-top: rem(46px);
     }
@@ -6,6 +10,15 @@
 
 .about-container {
     border: 1px solid transparent;
+
+    @include tablets {
+        width: 84%;
+        margin: 0 auto;
+        background-image: url(../img/about-bg-tablet.png);
+        background-position: 100% 100%;
+        background-repeat: no-repeat;
+        padding-bottom: rem(150px);
+    }
 
     @include phones {
         width: 90%;
@@ -15,26 +28,52 @@
 }
 
 .section-title {
-    @include phones {
-        font-size: rem(18px);
-        font-weight: normal;
-        margin-left: rem(30px);
-        position: relative;
-        margin-bottom: rem(36px);
+    font-weight: normal;
+    position: relative;
 
-        &::before {
-            content: '';
-            position: absolute;
+    &::before {
+        content: '';
+        position: absolute;
+        background-color: #000;
+        height: rem(2px);
+
+
+        
+        @include tablets {
+            width: rem(38px);
+            top: rem(8px);
+            left: rem(-55px);
+        }
+
+        @include phones {
             width: rem(23px);
-            height: rem(2px);
-            background-color: #000;
             top: rem(8px);
             left: rem(-30px);
         }
     }
+
+    @include tablets {
+        font-size: rem(24px);
+        margin-left: rem(55px);
+        margin-bottom: rem(45px);
+
+
+    }
+
+    @include phones {
+        font-size: rem(18px);
+        margin-left: rem(30px);
+        margin-bottom: rem(36px);
+    }
 }
 
 .about-section__text {
+    @include tablets {
+        font-size: rem(16px);
+        width: 50%;
+        margin-bottom: rem(30px);
+    }
+
     @include phones {
         margin-bottom: rem(10px);
     }
@@ -44,6 +83,7 @@
     color: #2a4f37;
     text-transform: uppercase;
     position: relative;
+
     @include phones {
         display: block;
         font-size: rem(12px);

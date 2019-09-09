@@ -1,0 +1,63 @@
+.main-footer {
+    background-color: #91aa59;
+    @include phones {
+        padding-top: rem(40px);
+    }
+}
+
+.footer-container {
+    @include phones {
+        width: 47%;
+        margin: 0 auto;
+    }
+}
+
+.footer__logo {
+    @include phones {
+        margin: 0 auto;
+        width: 33%;
+        margin-bottom: rem(12px);
+
+    }
+}
+
+.footer-socials__block {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    @include phones {
+        margin-bottom: rem(30px);
+    }
+}
+
+.footer-socials__link {
+    display: block;
+    font-size: 0;
+    width: rem(23px);
+    height: rem(19px);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+
+    &--vk {
+        background-image: url(../img/vk-footer.png);
+    }
+
+    &--ig {
+        background-image: url(../img/instagram-footer.png);
+    }
+
+    &--fb {
+        background-image: url(../img/facebook-footer.png);
+    }
+
+}
+
+.footer-copyright__text {
+    color: #fff;
+    @include phones {
+        font-size: rem(10px);
+        line-height: rem(20px);
+        text-align: center;
+    }
+}

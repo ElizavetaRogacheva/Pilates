@@ -1,0 +1,40 @@
+.contacts-section {
+    @include phones {
+        padding-top: rem(68px);
+    }
+}
+
+.contacts-container {
+    @include phones {
+        width: 90%;
+        margin: 0 auto;
+    }
+}
+
+.contacts-block {
+    @include phones {
+        padding-left: 8%;
+        margin-bottom: rem(27px);
+    }
+}
+
+.contacts-block__item {
+    @include phones {
+        margin-bottom: rem(23px);
+    }
+}
+
+.contacts-block__title {
+    @include phones {
+        font-size: rem(16px);
+        line-height: rem(22px);
+    }
+}
+
+.contacts__block-map {
+    @include phones {
+        height: rem(273px);
+        background: url(../img/map-mobile.jpg) center center / cover no-repeat;
+
+    }
+}

@@ -2,19 +2,39 @@
     background-color: #91aa59;
     width: 100%;
 
+    @include tablets {
+        padding-top: rem(22px);
+        background-image: url(../img/header-bg-tablet.jpg);
+        background-size: cover;
+    }
+
     @include phones {
         padding-top: rem(12px);
-
     }
 }
 
 .header-container {
-    @include phones {
-        display: flex;
-        justify-content: space-between;
-        width: 90%;
-        margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
 
+    @include tablets {
+        width: 84%;
+    }
+
+    @include phones {
+        width: 90%;
+    }
+}
+
+.header-phone {
+    @include tablets {
+        font-weight: bold;
+    }
+
+    @include phones {
+        display: none;
     }
 }
 
@@ -23,23 +43,65 @@
     width: 100%;
     top: 0;
     left: 0;
-    height: 90vh;
     background-color: #91aa59;
     z-index: 2;
+
+    @include tablets {
+        height: 80vh;  
+    }
+    
+    @include phones {
+        height: 90vh;
+    }
 }
+
+.main-nav__btn {
+    width: rem(20px);
+    height: rem(20px);
+    font-size: 0;
+    border: none;
+    background-color: transparent;
+    background-image: url(../img/burger-menu.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    cursor: pointer;
+}
+
 .main-nav__list {
-    padding-top: rem(90px);
     padding-left: 22%;
+
+    @include tablets {
+        padding-top: rem(118px);
+ 
+    }
+
+    @include phones {
+        padding-top: rem(90px);
+    }
 }
 
 .main-nav__item {
-    margin-bottom: rem(34px);
+    @include tablets {
+        margin-bottom: rem(70px);
+ 
+    }
+
+    @include phones {
+        margin-bottom: rem(34px);
+    }
 }
 
 .main-nav__link {
+    color: #ffffff;
+
+    @include tablets {
+        font-size: rem(36px);
+        line-height: rem(60px);
+  
+    }
+
     @include phones {
         font-size: rem(18px);
-        color: #ffffff;
         line-height: rem(43px);
     }
 }
@@ -78,18 +140,14 @@
     }
 }
 
-.main-nav__btn {
-    font-size: 0;
-    border: none;
-    background-color: transparent;
-    background-image: url(../img/burger-menu.png);
-    background-position: center center;
-    background-repeat: no-repeat;
-    cursor: pointer;
-}
 
 .header__center-container {
     margin: 0 auto;
+
+    @include tablets {
+        padding: rem(130px) 8% rem(190px);
+    }
+
     @include phones {
         padding: rem(97px) 5% rem(210px);
         background: url(../img/header-bg-mobile.jpg) 100% 100% / contain no-repeat;
@@ -100,36 +158,63 @@
 .main-header__title {
     color: #ffffff;
     text-transform: uppercase;
+    font-weight: normal;
+
+    @include tablets {
+        font-size: rem(48px);
+        letter-spacing: rem(3.6px);
+        margin-right: rem(390px);
+        line-height: rem(50px);
+        margin-bottom: rem(58px);
+
+    }
+
     @include phones {
+        font-size: rem(30px);
         letter-spacing: rem(3px);
         margin-right: rem(124px);
-        font-size: rem(30px);
         line-height: rem(30px);
-        font-weight: normal;
         margin-bottom: rem(25px);
+    }
+}
+
+.main-header__slogan {
+    color: #fff;
+
+    @include tablets {
+        font-size: rem(18px);
+        line-height: rem(30px);
+        margin-bottom: rem(42px);
+    }
+
+    @include phones {
+        display: none;
     }
 }
 
 .main-header__btn {
     border: rem(2px) solid #ffffff;
     background-color: transparent;
-    border-radius: rem(20px);
     color: #ffffff;
     cursor: pointer;
+    &:hover {
+        background-color: #fff;
+        color: #91aa59;
+    } 
+    
+    @include tablets {
+        font-size: rem(14px);
+        padding: rem(15px) rem(60px);
+        border-radius: rem(27px);
 
-
+    }
+       
     @include phones {
         font-size: rem(11px);
         line-height: rem(11px);
         padding: rem(12.5px) rem(24.5px);
+        border-radius: rem(20px);
     }
-
-    &:hover {
-        background-color: #fff;
-        color: #91aa59;
-
-    } 
-
 }
 
 .hidden {

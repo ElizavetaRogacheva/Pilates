@@ -8,7 +8,7 @@ $phones: 320px;
 
 
 @mixin tablets {
-    @media screen and (max-width: $tablets) {
+    @media (min-width: 481px) and (max-width: $tablets) {
       @content;
     }
   }

@@ -1,10 +1,20 @@
 .contacts-section {
+    @include tablets {
+        padding-top: rem(87px);
+    }
     @include phones {
         padding-top: rem(68px);
     }
 }
 
+.contacts-section__title {
+    @include tablets {
+        margin-bottom: rem(32px);
+    }
+}
+
 .contacts-container {
+    position: relative;
     @include phones {
         width: 90%;
         margin: 0 auto;
@@ -12,13 +22,26 @@
 }
 
 .contacts-block {
+    @include tablets {
+        position: absolute;
+        left: 6%;
+        background-color: #91aa59;
+        color: #fff;
+        width: 33%;
+        padding-left: rem(40px);
+        padding-top: rem(30px);
+    }
     @include phones {
         padding-left: 8%;
         margin-bottom: rem(27px);
+        color: black;
     }
 }
 
 .contacts-block__item {
+    @include tablets {
+        margin-bottom: rem(35px);
+    }
     @include phones {
         margin-bottom: rem(23px);
     }
@@ -32,6 +55,11 @@
 }
 
 .contacts__block-map {
+    @include tablets {
+        height: rem(354px);
+        background: url(../img/map-tablets.jpg) center center / cover no-repeat;
+
+    }
     @include phones {
         height: rem(273px);
         background: url(../img/map-mobile.jpg) center center / cover no-repeat;

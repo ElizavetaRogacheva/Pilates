@@ -3,50 +3,101 @@
 }
 
 .info-container {
-    width: 90%;
     margin: 0 auto;
+    @include tablets {
+        width: 84%;
+    }
+    @include phones {
+        width: 90%;
+    }
 }
 
 .info-section__item {
+    @include tablets {
+        padding: rem(105px) 0;
+    }
     @include phones {
         margin-bottom: rem(80px);
+    }
 
         &:first-child {
-            background-image: url(../img/pose-1-mobile.png);
-            background-repeat: no-repeat;
-            background-position: 50% rem(23px);
+            @include tablets {
+                padding-right: 42%;
+                background-image: url(../img/pose-1-tablet.png);
+                background-repeat: no-repeat;
+                background-position: 100% 0;
+                background-size: contain;
+
+            }
+            @include phones {
+                background-image: url(../img/pose-1-mobile.png);
+                background-repeat: no-repeat;
+                background-position: 50% rem(23px);
+
+            }
         }
 
         &:nth-child(2) {
-            background-image: url(../img/pose-2-mobile.png);
-            background-repeat: no-repeat;
-            background-position: 50% rem(20px); 
-            background-size: rem(195px) rem(280px);
+            @include tablets {
+                padding-left: 51%;
+                background-image: url(../img/pose-2-tablet.png);
+                background-repeat: no-repeat;
+                background-size: contain;
+
+            }
+            @include phones {
+                background-image: url(../img/pose-2-mobile.png);
+                background-repeat: no-repeat;
+                background-position: 50% rem(20px); 
+                background-size: rem(195px) rem(280px);
+            }
         }
         &:nth-child(3) {
-            background-image: url(../img/pose-3-mibile.png);
-            background-repeat: no-repeat;
-            background-position: 50% rem(20px); 
+            @include tablets {
+                padding-right: 48%;
+                background-image: url(../img/pose-3-tablet.png);
+                background-repeat: no-repeat;
+                background-position: 100% 0;
+
+            }
+            @include phones {
+                background-image: url(../img/pose-3-mibile.png);
+                background-repeat: no-repeat;
+                background-position: 50% rem(20px); 
+            }
         }
         &:last-child {
-            background-image: url(../img/pose-4-mobile.png);
-            background-repeat: no-repeat;
-            background-position: 50% rem(20px); 
+            @include tablets {
+                padding-left: 58%;
+                background-image: url(../img/pose-4-tablet.png);
+                background-repeat: no-repeat;
+
+            }
+            @include phones {
+                background-image: url(../img/pose-4-mobile.png);
+                background-repeat: no-repeat;
+                background-position: 50% rem(20px); 
+            }
         }
 
 
-    }
 }
 
 .info-item__title {
     font-weight: normal;
-    font-size: rem(14px);
+    @include tablets {
+        font-size: rem(18px);
+    }
     @include phones {
+        font-size: rem(14px);
         text-align: center;
         margin-bottom: rem(280px)
     }
 }
 
 .info-item__text {
-    text-align: center;
+    @include phones {
+        text-align: center;
+
+    }
 }

@@ -1,53 +1,67 @@
 .comments-container {
+    margin: 0 auto;
+    @include tablets {
+        width: 84%;
+ 
+    }
     @include phones {
         width: 90%;
-        margin: 0 auto;
     }
 }
 
 .comments-carousel__wrapper {
     overflow: hidden;
     width: 100%;
+    position: relative;
 }
 
 .comments-carousel__list {
-    @include phones {
-        display: flex;
-        width: 300%;
-    }
+    display: flex;
+    width: 300%;
 }
 
 .comment-carousel__item {
     width: 100%;
+    @include tablets {
+        margin-bottom: rem(80px);
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
     @include phones {
         margin-bottom: rem(65px);
     }
 }
 
+.comment-wrapper {
+    @include tablets {
+        width: 48%;
+    }
+}
+
 .comment-photo__block {
+    width: rem(98px);
+    height: rem(94px);
+    border-radius: 50%;
     @include phones {
-        width: rem(98px);
-        height: rem(94px);
-        border-radius: 50%;
         margin: 0 auto;
         margin-bottom: rem(20px);
-
-        img {
-            width: rem(98px);
-            height: rem(94px);
-    
-        }
     }
-
+            img {
+                width: rem(98px);
+                height: rem(94px);
+            }
 }
 
 .comment-title-name {
     font-weight: normal;
+    margin-bottom: rem(12px);
+    @include tablets {
+        text-align: left;
+    }
     @include phones {
         font-size: rem(16px);
         text-align: center;
-        margin-bottom: rem(12px);
-
     }
 }
 
@@ -55,15 +69,20 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    @include tablets {
+        width: 50%;
+        margin-bottom: rem(20px);
+    }
     @include phones {
         width: 47%;
         margin: 0 auto rem(30px);
-
     }
 }
 
 .comments__text {
-    text-align: center;
+    @include phones {
+        text-align: center;
+    }
 }
 
 .comment-social__link {
@@ -89,22 +108,18 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    @include phones {
-        width: 21%;
-        margin: 0 auto;
-    }
+    margin: 0 auto;
+    width: 21%;
 }
 
 .carousel__btn {
     font-size: 0;
     cursor: pointer;
-    @include phones {
         width: rem(15px);
         height: rem(15px);
         border-radius: rem(20px);
         background-color: #d5dec1;
         border: none;
-    }
 }
 
 .active-btn {
@@ -112,4 +127,30 @@
     height: rem(18px);
     background-color: #91aa59;
 
+}
+
+.comments-carousel__btn {
+    cursor: pointer;
+    width: rem(15px);
+    height: rem(26px);
+    border: none;
+    font-size: 0;
+    background-color: transparent;
+    @include tablets {
+        position: absolute;
+        top: rem(50px);
+        &--back {
+            background-image: url(../img/left-arrow.png);
+            background-size: contain;
+        }
+        &--next {
+            right: 0;
+            background-image: url(../img/left-arrow.png);
+            transform: rotate(180deg);
+            background-size: contain;
+        }
+    }
+    @include phones {
+        display: none;
+    }
 }

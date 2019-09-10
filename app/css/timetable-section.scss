@@ -39,7 +39,9 @@
 
     &:first-child {
         background-color: #c8d4ac;
-        margin-bottom: rem(20px);
+        @include phones {
+            margin-bottom: rem(20px);
+        }
         &::before {
             content: '01';
             position: absolute;
@@ -52,7 +54,9 @@
     }
     &:nth-child(2) {
         background-color: #b2c38a;
-        margin-bottom: rem(20px);
+        @include phones {
+            margin-bottom: rem(20px);
+        }
         &::before {
             content: '02';
             position: absolute;
@@ -62,8 +66,6 @@
             font-weight: bold;
             left: rem(80px);
         }
-
-
     }
     &:last-child {
         background-color: #9cb269;
@@ -82,7 +84,6 @@
         width: 30%;
         padding-top: rem(100px);
         padding-left: 2%;
-
     }
   
     @include phones {
@@ -92,52 +93,38 @@
 }
 
 .timetable-item__container {
-    @include phones {
-        margin-bottom: rem(41px);
-    }
+    margin-bottom: rem(41px);
 }
 
 .timetable-item__title {
     color: #fff;
     text-transform: uppercase;
-    @include phones {
-        font-size: rem(12px);
-        letter-spacing: rem(1.2px);
+    font-size: rem(12px);
+    letter-spacing: rem(1.2px);
 
-        &--big {
-            font-size: rem(18px);
-            margin-bottom: rem(17px);
-        }
+    &--big {
+        font-size: rem(18px);
+        margin-bottom: rem(17px);
     }
 }
 
 .timetable-item__text {
     color: #fff;
     text-transform: uppercase;
-    @include phones {
-        font-size: rem(16px);
-}
+    font-size: rem(16px);
+
 }
 
 .price {
-    @include phones {
-        margin-bottom: rem(27px);
-    }
+    margin-bottom: rem(27px);
 }
 
 .time {
-    @include phones {
-        margin-bottom: rem(18px);
-
-    }
+    margin-bottom: rem(18px);
 }
 
 .last-item-time {
-    @include phones {
-        margin-bottom: rem(32px);
-
-    }
-
+    margin-bottom: rem(32px);
 }
 
 .timetable-item__link {
@@ -146,20 +133,26 @@
     border-radius: rem(20px);
     display: block;
     position: relative;
-
-    @include phones {
-        padding: rem(10px) 0;
-        width: rem(132px);
-        text-align: center;
-        &::after {
-            content: '';
-            position: absolute;
-            width: rem(31px);
-            height: rem(12px);
-            background: url(../img/btn-arrow.png) 0 0 / contain no-repeat;
-            top: rem(18px);
+    width: rem(132px);
+    text-align: center;
+    &::after {
+        content: '';
+        position: absolute;
+        width: rem(31px);
+        height: rem(12px);
+        background: url(../img/btn-arrow.png) 0 0 / contain no-repeat;
+        @include tablets {
+            top: rem(8px);
             left: rem(110px);
 
         }
+        @include phones {
+            top: rem(18px);
+            left: rem(110px);
+        }
+    }
+
+    @include phones {
+        padding: rem(10px) 0;
     }
 }

@@ -1,6 +1,12 @@
 .main-header {
     background-color: #91aa59;
     width: 100%;
+    padding-top: rem(26px);
+    background-image: url(../img/bg-desctop-figure+.png) ,url(../img/bg-desctop.jpg);
+    background-size: 50%, cover;
+    background-repeat: no-repeat;
+    background-position: 60% 100%;
+
 
     @include tablets {
         padding-top: rem(22px);
@@ -10,6 +16,7 @@
 
     @include phones {
         padding-top: rem(12px);
+        background-image: none;
     }
 }
 
@@ -18,6 +25,7 @@
     justify-content: space-between;
     align-items: center;
     margin: 0 auto;
+    width: 85%;
 
     @include tablets {
         width: 84%;
@@ -29,9 +37,7 @@
 }
 
 .header-phone {
-    @include tablets {
-        font-weight: bold;
-    }
+    font-weight: bold;
 
     @include phones {
         display: none;
@@ -143,6 +149,7 @@
 
 .header__center-container {
     margin: 0 auto;
+    padding: rem(135px) 7% rem(288px);
 
     @include tablets {
         padding: rem(130px) 8% rem(190px);
@@ -159,6 +166,11 @@
     color: #ffffff;
     text-transform: uppercase;
     font-weight: normal;
+    font-size: rem(58px);
+    letter-spacing: rem(4.35px);
+    margin-right: 65%;
+    line-height: rem(60px);
+    margin-bottom: rem(50px);
 
     @include tablets {
         font-size: rem(48px);
@@ -180,10 +192,11 @@
 
 .main-header__slogan {
     color: #fff;
+    font-size: rem(18px);
+    line-height: rem(30px);
+    margin-bottom: rem(52px);
 
     @include tablets {
-        font-size: rem(18px);
-        line-height: rem(30px);
         margin-bottom: rem(42px);
     }
 
@@ -197,18 +210,16 @@
     background-color: transparent;
     color: #ffffff;
     cursor: pointer;
+    font-size: rem(14px);
+    padding: rem(15px) rem(60px);
+    border-radius: rem(27px);
+
+
     &:hover {
         background-color: #fff;
         color: #91aa59;
     } 
-    
-    @include tablets {
-        font-size: rem(14px);
-        padding: rem(15px) rem(60px);
-        border-radius: rem(27px);
-
-    }
-       
+           
     @include phones {
         font-size: rem(11px);
         line-height: rem(11px);
